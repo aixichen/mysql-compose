@@ -1,0 +1,10 @@
+version: "3"
+services :
+   mysql:
+    build: ./mysql #编译./mysql下的Dockerfile
+    ports:
+      - "3306:3306" # 绑定服务器端口:容器端口
+    volumes:
+      - /var/mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
